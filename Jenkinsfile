@@ -13,9 +13,6 @@ pipeline {
                 sh 'mvn -B -DskipTests clean package'
                 }
             }
-
-        }
-
         stage('Build Docker Image') {
             steps {
                 echo 'Starting to build docker image'
