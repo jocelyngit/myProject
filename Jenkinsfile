@@ -18,10 +18,6 @@ pipeline {
                 echo 'Starting to build docker image'
                 script {
                     def customImage = docker.build("msmegaappimage:${env.BUILD_ID}")
-					
-					customImage.inside {
-						sh 'make test'
-					}
 
             }
         }
@@ -36,8 +32,7 @@ pipeline {
 				
                 script {
                     
-					docker.image('msmegaappimage:${env.BUILD_ID}').withRun(' --name msmegaapp --detach --publish 8081:8081 --publish 49000:49000') 
-					{ c ->	sh 'make check'}
+					docker.image('msmegaappimage:${env.BUILD_ID}').withRun(' --name msmegaapp --detach --publish 8081:8081 --publish 49000:49000')
                 }
         }
 		}
