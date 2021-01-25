@@ -25,10 +25,6 @@ pipeline {
         stage('run docker Image') {
             steps {
             echo 'Running container'
-			
-				sh 'docker stop msmegaapp'
-				
-				sh 'docker rm -f msmegaapp'
 				
                 script {
                     
