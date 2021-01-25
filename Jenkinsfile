@@ -26,10 +26,8 @@ pipeline {
             steps {
             echo 'Running container'
 				
-                script {
-                    
-					docker.image('msmegaappimage:${env.BUILD_ID}').withRun(' --name msmegaapp --detach --publish 8081:8081 --publish 49000:49000')
-                }
+					sh 'docker run --name msmegaapp --detach --publish 8081:8081 --publish 49000:49000 msmegaappimage:${env.BUILD_ID}'
+                
         }
 		}
     }
