@@ -23,12 +23,15 @@ pipeline {
         }
 		}
         stage('run docker Image') {
+			agent {
+				docker {
+					image 'msmegaappimage:${env.BUILD_ID}'
+						}
+			}
             steps {
-            echo 'Running container'
-				
 					sh 'docker run --name msmegaapp --detach --publish 8081:8081 --publish 49000:49000 msmegaappimage:${env.BUILD_ID}'
                 
-        }
+				}
 		}
     }
 }
