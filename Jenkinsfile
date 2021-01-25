@@ -14,13 +14,32 @@ pipeline {
                 }
             }
         stage('Build Docker Image') {
-            steps {
+                steps {
                 echo 'Starting to build docker image'
                 script {
                     def customImage = docker.build("msmegaappimage:${env.BUILD_ID}")
-                }
+					
+					customImage.inside {
+						sh 'make test'
+					}
 
             }
         }
+		}
+        stage('run docker Image') {
+            steps {
+            echo 'Running container'
+			
+				sh 'docker stop msmegaapp'
+				
+				sh 'docker rm -f msmegaapp'
+				
+                script {
+                    
+					docker.image('msmegaappimage:${env.BUILD_ID}').withRun(' --name msmegaapp --detach --publish 8081:8081 --publish 49000:49000') 
+					{ c ->	sh 'make check'}
+                }
+        }
+		}
     }
 }
