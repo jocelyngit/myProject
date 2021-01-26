@@ -1,9 +1,9 @@
 # ... Deployment YAML definition
 
-apiVersion: apps/v1
+apiVersion: v1
 kind: Deployment
 metadata:
-  name: ms-mega-app
+  name: msmega-deloyment
 spec:
   replicas: 1
   selector:
@@ -31,7 +31,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: ms-mega-app
+  name: msmega-deloyment
 spec:
   selector:
     app: podlabel
