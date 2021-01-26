@@ -1,5 +1,5 @@
 pipeline {
-    agent { label 'podlabel' }
+    agent any
 
     stages {
         stage('Build') {
