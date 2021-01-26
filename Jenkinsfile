@@ -22,6 +22,9 @@ pipeline {
             }
         }
 		}
+		
+		node {
+		
         stage('run docker Image') {
 			steps {
 				script {
@@ -29,6 +32,7 @@ pipeline {
 				sh "docker run --name msmega --detach  --publish 8081:8081 --publish 45000:45000 msmegaappimage:${env.BUILD_ID}"
 				}
 				}
+		}
 		}
     }
 }
