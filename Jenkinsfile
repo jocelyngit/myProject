@@ -30,6 +30,8 @@ pipeline {
 				}
 				}
 		}
+		stage ('Deploy to kubernetes') {
+		}
 		
     }
 }
