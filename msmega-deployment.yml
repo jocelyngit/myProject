@@ -1,5 +1,17 @@
-# ... Deployment YAML definition
+# ... Service YAML definition
+apiVersion: v1
+kind: Service
+metadata:
+  name: msmega-deployment
+spec:
+  selector:
+    app: podlabel
+  ports:
+    - port: 8082
+      targetPort: 8081
+  type: LoadBalancer
 
+# ... Deployment YAML definition
 apiVersion: v1
 kind: Deployment
 metadata:
@@ -23,19 +35,4 @@ spec:
             #- name: MONGO_URL
              # value: mongodb://mongo:27017/dev
           imagePullPolicy: Always
-          
         
----
-# ... Service YAML definition
-
-apiVersion: v1
-kind: Service
-metadata:
-  name: msmega-deployment
-spec:
-  selector:
-    app: podlabel
-  ports:
-    - port: 8082
-      targetPort: 8081
-  type: LoadBalancer
