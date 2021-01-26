@@ -1,8 +1,5 @@
 node {
     stage ('Clone repo and build') {
-	
-		git 'https://github.com/jocelyngit/ms-mega-app-test.git'
-		
 		agent {
                      docker {
                         image 'maven:3-alpine'
