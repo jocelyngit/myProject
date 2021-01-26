@@ -1,5 +1,5 @@
 pipeline {
-    agent none
+    agent any
 
     stages {
         stage('Build') {
@@ -22,9 +22,6 @@ pipeline {
             }
         }
 		}
-		
-		node {
-		
         stage('run docker Image') {
 			steps {
 				script {
@@ -33,6 +30,6 @@ pipeline {
 				}
 				}
 		}
-		}
+		
     }
 }
