@@ -21,8 +21,9 @@ pipeline {
 				steps {
 					 withMaven (
 					 maven: 'Maven 3.5.4',
+					 mavenSettingsConfig: 'MyGlobalSettings',
 					 mavenLocalRepo: '.repository') {
-					sh 'mvn -B -DskipTests clean package'
+						sh 'mvn -B -DskipTests clean package'
 					}
                 }
             }
