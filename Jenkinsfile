@@ -20,7 +20,7 @@ pipeline {
 			stage('Build') {
 				steps {
 					 withMaven (
-					 maven 'Maven 3.5.4'
+					 maven: 'Maven 3.5.4'
 					 mavenLocalRepo: '.repository') {
 					sh 'mvn -B -DskipTests clean package'
 					}
