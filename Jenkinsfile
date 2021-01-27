@@ -16,12 +16,6 @@ pipeline {
 					''' 
 				}
 			}
-	
-			stage ('Checkout Source') {
-				steps {
-					git url:'https://github.com/jocelyngit/ms-mega-app-test.git', branch:'master'
-				}
-			}
 			
 			stage('Build') {
 				steps {
