@@ -26,7 +26,8 @@ pipeline {
 					 maven: 'Maven 3.5.4',
 					 mavenSettingsConfig: 'ae641922-8167-4405-a55f-892dfe910391',
 					 mavenLocalRepo: '.repository') {
-						sh 'mvn -B -DskipTests clean package'
+					 sh 'mvn clean verify'
+						#sh 'mvn -B -DskipTests clean package'
 					}
                 }
             }
