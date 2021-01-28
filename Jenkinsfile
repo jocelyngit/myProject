@@ -11,8 +11,7 @@ pipeline {
 	
 			stage ('Initialize') {
 				steps {
-					def dockerHome = dockerTool 'docker'
-					env.PATH = "${dockerHome}/bin:${env.PATH}"
+					env.PATH = "${docker}/bin:${env.PATH}"
 		
 					sh '''
 						echo "PATH = ${PATH}"
