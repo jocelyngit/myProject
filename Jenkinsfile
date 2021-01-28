@@ -42,9 +42,11 @@ pipeline {
 		}
 		stage ('Deploy to kubernetes') {
 			steps {
-				script {
-					kubernetesDeploy(configs: "msmega-deployment.yml", kubeconfigId: "kubeconfigid")
-				}
+					 withKubeConfig([credentialsId: 'kubeconfigid']) {  
+ 
+					sh 'chmod u+x ./kubectl'  
+					sh './kubectl apply -f msmega-deployment.yml'  
+							}  
 			}
 		}
 		
