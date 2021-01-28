@@ -11,7 +11,6 @@ pipeline {
 	
 			stage ('Initialize') {
 				steps {
-					env.PATH = "${docker}/bin:${env.PATH}"
 		
 					sh '''
 						echo "PATH = ${PATH}"
