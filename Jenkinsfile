@@ -41,13 +41,14 @@ pipeline {
 			}
 		}
 		stage ('Deploy to kubernetes') {
+			agent { label 'podlabel' }
 			steps {
 				script {
 				
-					 kubernetesDeploy{kubeconfigId: 'kubeconfigid', 
-						configs: 'msmega-deployement.yml',
-							enableConfigSubstitution: false }         
-						 
+					 kubernetesDeploy{kubeconfigId: "kubeconfigid", 
+						configs: "msmega-deployement.yml",
+							enableConfigSubstitution: false 
+							         	 
 					}
 				}  
 			}
