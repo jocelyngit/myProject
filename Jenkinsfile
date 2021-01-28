@@ -25,7 +25,7 @@ pipeline {
 					 withMaven (
 					 mavenSettingsConfig: 'ae641922-8167-4405-a55f-892dfe910391'
 					 ) {
-					 sh 'mvn clean verify'
+					 sh 'mvnw clean verify'
 						
 					}
                 }
