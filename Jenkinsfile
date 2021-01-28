@@ -23,9 +23,10 @@ pipeline {
 					git url: 'https://github.com/jocelyngit/ms-mega-app-test.git'
 					
 					 withMaven (
+					 mavenLocalRepo: '${M2_HOME}'
 					 mavenSettingsConfig: 'ae641922-8167-4405-a55f-892dfe910391'
 					 ) {
-					 sh 'mvnw clean verify'
+					 sh 'mvn clean verify'
 						
 					}
                 }
