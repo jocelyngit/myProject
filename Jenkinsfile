@@ -45,11 +45,11 @@ pipeline {
 			steps {
 				script {
 				
-					 kubernetesDeploy{kubeconfigId: "kubeconfigid", 
+					 kubernetesDeploy(kubeconfigId: "kubeconfigid", 
 						configs: "msmega-deployement.yml",
 							enableConfigSubstitution: false 
 							         	 
-					}
+					)
 				}  
 			}
 		}
