@@ -4,6 +4,7 @@ pipeline {
 	tools {
 		maven 'Maven 3.5.4' 
         jdk 'jdk8' 
+		docker 'docker'
 	}
 
     stages {
@@ -19,10 +20,7 @@ pipeline {
 			
 			stage('Build') {
 				steps {
-				
-					 sh 'mvn clean verify'
-						
-					
+					 sh 'mvn -B -DskipTests clean package'
                 }
             }
 			
