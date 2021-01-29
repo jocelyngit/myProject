@@ -1,6 +1,6 @@
 ---
-kind: Deployment
 apiVersion: extensions/v1beta1
+kind: Deployment
 metadata:
   name: msmega-deployment
 spec:
@@ -18,13 +18,10 @@ spec:
           image: msmegaappimage:${BUILD_ID}
           ports:
             - containerPort: 8081
-          #env:
-            #- name: MONGO_URL
-             # value: mongodb://mongo:27017/dev
           imagePullPolicy: Always
 ---
-kind: Service
 apiVersion: v1
+kind: Service
 metadata:
   name: msmega-service
 spec:
