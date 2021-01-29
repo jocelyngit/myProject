@@ -3,7 +3,7 @@ pipeline {
 	
 	tools {
 		maven 'Maven 3.5.4' 
-        jdk 'jdk8' 
+        	jdk 'jdk8' 
 		dockerTool 'docker'
 	}
 
@@ -43,11 +43,10 @@ pipeline {
 		stage ('Deploy to kubernetes') {
 			steps {
 				script {
-				
-					 kubernetesDeploy(kubeconfigId: "kubeconfigid", 
-						configs: "msmega-deployment.yml",
-							enableConfigSubstitution: false 
-							         	 
+					 kubernetesDeploy( 
+							configs: "msmega-deployment.yml",
+						 	kubeconfigId: "kubeconfigid",
+							enableConfigSubstitution: true 	         	 
 					)
 				}  
 			}
