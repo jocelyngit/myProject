@@ -43,11 +43,10 @@ pipeline {
 		stage ('Deploy to kubernetes') {
 			steps {
 				script {
-					 kubernetesDeploy( 
+					kubernetesDeploy{ 
 							configs: "msmega-deployment.yml",
-						 	kubeconfigId: "kubeconfigid",
-						 	enableConfigSubstitution: false
-					)
+						 	kubeconfigId: "kubeconfigid"
+					}
 				}  
 			}
 		}
