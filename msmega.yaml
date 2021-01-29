@@ -1,5 +1,5 @@
 ---
-apiVersion: extensions/v1beta1
+version: extensions/v1beta1
 kind: Deployment
 metadata:
   name: msmega-deployment
@@ -20,7 +20,7 @@ spec:
             - containerPort: 8081
           imagePullPolicy: Always
 ---
-apiVersion: v1
+version: v1
 kind: Service
 metadata:
   name: msmega-service
