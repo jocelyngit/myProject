@@ -45,7 +45,8 @@ pipeline {
 				script {
 					 kubernetesDeploy( 
 							configs: "msmega-deployment.yml",
-						 	kubeconfigId: "kubeconfigid" 	         	 
+						 	kubeconfigId: "kubeconfigid",
+						 	enableConfigSubstitution: false
 					)
 				}  
 			}
