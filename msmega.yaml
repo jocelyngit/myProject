@@ -14,7 +14,7 @@ spec:
         app: podlabel
     spec:
       containers:
-        - name: msmega:${BUILD_ID}
+        - name: msmega
           image: msmegaappimage:${BUILD_ID}
           ports:
             - containerPort: 8081
