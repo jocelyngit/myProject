@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: msmega
-          image: msmegaappimage:${BUILD_ID}
+          image: http://localhost:5000/msmegaappimage:${BUILD_ID}
           ports:
             - containerPort: 8081
           imagePullPolicy: Always
