@@ -39,9 +39,7 @@ pipeline {
 	    
 	    stage ('push image to local registry') {
 		    steps {
-			    script {
-			    	sh 'docker tag msmegaappimage:${env.BUILD_ID} http://localhost:5000/msmegaappimage:${env.BUILD_ID}'
-				    
+			    script {	    
 				    sh 'docker push http://localhost:5000/msmegaappimage:${env.BUILD_ID}'
 			   }
 		    }
