@@ -1,6 +1,10 @@
 pipeline {
     agent any
 	
+	environment {
+		def customImage = ''
+	}
+	
 	tools {
 		maven 'Maven 3.5.4' 
         	jdk 'jdk8' 
@@ -28,10 +32,21 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    def customImage = docker.build("msmegaappimage:${env.BUILD_ID}")
+                     customImage = docker.build("msmegaappimage:${env.BUILD_ID}")
 				}
 			}
 		}
+	    
+	    stage ('push image to local registry') {
+		    steps {
+			    script {
+			    docker.Withregitry('http://localhost:5000') {
+			    customImage.push()
+			    }
+			   }
+		    }
+			    
+	    }
 		
         stage('run docker Image') {
 			steps {
