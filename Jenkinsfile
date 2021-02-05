@@ -40,9 +40,9 @@ pipeline {
 	    stage ('push image to local registry') {
 		    steps {
 			    script {	  
-				    sh "docker tag msmegaappimage:${env.BUILD_ID} http://192.168.151.23:5001/msmegaappimage"
+				    sh "docker tag msmegaappimage:${env.BUILD_ID} 192.168.151.23:5001/msmegaappimage"
 
-				    sh "docker push http://192.168.151.23:5001/msmegaappimage"
+				    sh "docker push 192.168.151.23:5001/msmegaappimage"
 			   }
 		    }
 			    
@@ -51,7 +51,7 @@ pipeline {
         stage('run docker Image') {
 			steps {
 				script {
-					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 http://192.168.151.23:5001/msmegaappimage"
+					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 192.168.151.23:5001/msmegaappimage"
 				}
 			}
 		}
