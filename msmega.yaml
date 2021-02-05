@@ -1,10 +1,10 @@
 ---
-apiVersion: apps/v1
+apiVersion: extensions/v1beta1
 kind: Deployment
 metadata:
   name: msmega-deployment
 spec:
-  replicas: 1
+  replicas: 3
   selector:
     matchLabels:
       app: podlabel
@@ -14,7 +14,7 @@ spec:
         app: podlabel
     spec:
       containers:
-        - name: msmega
+        - name: msmega:${BUILD_ID}
           image: msmegaappimage:${BUILD_ID}
           ports:
             - containerPort: 8081
@@ -28,6 +28,6 @@ spec:
   selector:
     app: podlabel
   ports:
-    - port: 8085
+    - port: 8088
       targetPort: 8081
   type: LoadBalancer
