@@ -3,6 +3,8 @@ pipeline {
 	
 	environment {
 		def customImage = ''
+		registry = "jospunto/test"
+		registryCredential = 'dockerhubid'
 	}
 	
 	tools {
@@ -32,19 +34,19 @@ pipeline {
         stage('Build & push Docker Image') {
             steps {
                 script {
-                     customImage = docker.build("msmegaappimage:${env.BUILD_ID}")
+                     customImage = docker.build registry + ":${env.BUILD_ID}"
 			
-				sh "docker image tag msmegaappimage:${env.BUILD_ID} 192.168.151.23:5001/msmegaappimage"
-				    
-				    sh "docker image push 192.168.151.23:5001/msmegaappimage"
+			docker.withRegistry('', registryCredential) {
+			customImage.push
 				}
+			}
 			}
 		}
 		
         stage('run docker Image') {
 			steps {
 				script {
-					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 192.168.151.23:5001/msmegaappimage"
+					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000  jospunto/test:${env.BUILD_ID}"
 				}
 			}
 		}
