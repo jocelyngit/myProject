@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: msmega
-          image: http://localhost:5000/msmegaappimage:${BUILD_ID}
+          image: jospunto/test:${BUILD_ID}
           ports:
             - containerPort: 8081
           imagePullPolicy: Always
@@ -28,6 +28,6 @@ spec:
   selector:
     app: podlabel
   ports:
-    - port: 8088
+    - port: 9500
       targetPort: 8081
   type: LoadBalancer
