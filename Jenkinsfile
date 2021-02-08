@@ -34,9 +34,9 @@ pipeline {
                 script {
                      customImage = docker.build("msmegaappimage:${env.BUILD_ID}")
 			
-				sh "docker tag msmegaappimage:${env.BUILD_ID} 192.168.151.23:5001/msmegaappimage"
+				sh "docker image tag msmegaappimage:${env.BUILD_ID} 192.168.151.23:5001/msmegaappimage"
 				    
-				    sh "docker push 192.168.151.23:5001/msmegaappimage"
+				    sh "docker image push 192.168.151.23:5001/msmegaappimage"
 				}
 			}
 		}
