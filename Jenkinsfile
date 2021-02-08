@@ -46,7 +46,7 @@ pipeline {
         stage('run docker Image') {
 			steps {
 				script {
-					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000  jospunto/test:${env.BUILD_ID}"
+					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 jospunto/test:${BUILD_ID}"
 				}
 			}
 		}
