@@ -31,15 +31,22 @@ pipeline {
                 }
             }
 			
-        stage('Build & push Docker Image') {
+        stage('Build Docker Image') {
             steps {
                 script {
                      customImage = docker.build registry + ":${env.BUILD_ID}"
+				}
+			}
+		}
+	    
+	    stage('push Docker Image') {
+            steps {
+                script {
 			
 			docker.withRegistry('', registryCredential) {
 			customImage.push()
+					}
 				}
-			}
 			}
 		}
 		
