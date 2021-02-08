@@ -37,7 +37,7 @@ pipeline {
                      customImage = docker.build registry + ":${env.BUILD_ID}"
 			
 			docker.withRegistry('', registryCredential) {
-			customImage.push
+			customImage.push()
 				}
 			}
 			}
