@@ -44,6 +44,7 @@ pipeline {
                 script {
 			docker.withRegistry('', registryCredential) {
 				docker.push()
+			}
 				}
 			}
 		}
