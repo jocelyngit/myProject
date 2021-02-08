@@ -42,7 +42,8 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			sh "docker push jospunto/test${env.BUILD_ID}"
+			docker.withRegistry('', registryCredential) {
+				docker.push()
 				}
 			}
 		}
