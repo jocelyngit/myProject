@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msmega-deployment
+  name: msmega-deployment1
 spec:
-  replicas: 3
+  replicas: 2
   selector:
     matchLabels:
       app: podlabel
@@ -17,17 +17,17 @@ spec:
         - name: msmega
           image: localhost:5003/megaappimage
           ports:
-            - containerPort: 8081
+            - containerPort: 8000
           imagePullPolicy: Always
 ---
 apiVersion: v1
 kind: Service
 metadata:
-  name: msmega-service
+  name: msmega-service1
 spec:
   selector:
     app: podlabel
   ports:
-    - port: 9500
-      targetPort: 8081
+    - port: 10000
+      targetPort: 8000
   type: LoadBalancer
