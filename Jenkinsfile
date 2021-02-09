@@ -40,9 +40,9 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			sh "docker tag megaappimage:${env.BUILD_ID} localhost:5002/megaappimage"
+			sh "docker tag megaappimage:${env.BUILD_ID} localhost:5003/megaappimage"
 			
-			sh "docker push localhost:5002/megaappimage"
+			sh "docker push localhost:5003/megaappimage"
 				}
 			}
 		}
