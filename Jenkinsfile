@@ -32,7 +32,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                     customImage = docker.build registry + ":${env.BUILD_ID}"
+                     customImage = docker.build("megaappimage:${env.BUILD_ID}")
 				}
 			}
 		}
@@ -40,9 +40,9 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			sh "docker tag jospunto/test:${env.BUILD_ID} registry.hub.docker.com/jospunto/test:${env.BUILD_ID}"
+			sh "docker tag megaappimage:${env.BUILD_ID} 127.0.0.1:5002/megaappimage"
 			
-			sh "docker push registry.hub.docker.com/jospunto/test:${env.BUILD_ID}"
+			sh "docker push 127.0.0.1:5002/megaappimage"
 				}
 			}
 		}
@@ -50,7 +50,7 @@ pipeline {
         stage('run docker Image') {
 			steps {
 				script {
-					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 jospunto/test:${BUILD_ID}"
+					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 127.0.0.1:5002/megaappimage/v2/_catalog"
 				}
 			}
 		}
