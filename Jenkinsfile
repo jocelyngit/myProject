@@ -50,7 +50,7 @@ pipeline {
         stage('run docker Image') {
 			steps {
 				script {
-					sh "docker run --name msmega --detach --publish 8081:8081 --publish 45000:50000 192.168.151.23:5002/megaappimage/v2/_catalog"
+					sh "docker run --name msmega --detach --restart=always --publish 8081:8081 --publish 45000:50000 localhost:5003/megaappimage"
 				}
 			}
 		}
