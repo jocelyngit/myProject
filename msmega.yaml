@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: msmega
-          image: jospunto/test:${BUILD_ID}
+          image: localhost:5003/megaappimage
           ports:
             - containerPort: 8081
           imagePullPolicy: Always
