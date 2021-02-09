@@ -3,8 +3,6 @@ pipeline {
 	
 	environment {
 		def customImage = ''
-		registry = "jospunto/test"
-		registryCredential = 'dockerhubid'
 	}
 	
 	tools {
@@ -42,9 +40,9 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			docker.withRegistry('https://registry.hub.docker.com', registryCredential) {
-				customImage.push()
-			}
+			sh "docker tag jospunto/test:${env.BUILD_ID} registry.hub.docker.com/jospunto/test:${env.BUILD_ID}"
+			
+			sh "docker push registry.hub.docker.com/jospunto/test:${env.BUILD_ID}"
 				}
 			}
 		}
