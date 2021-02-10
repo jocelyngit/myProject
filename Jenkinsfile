@@ -40,9 +40,9 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			sh "docker tag megaappimage:${env.BUILD_ID} 192.168.151.23:5002/megaappimage"
+			sh "docker tag megaappimage:${env.BUILD_ID} 192.168.151.23:5004/megaappimage"
 			
-			sh "docker push 192.168.151.23:5002/megaappimage"
+			sh "docker push 192.168.151.23:5004/megaappimage"
 				}
 			}
 		}
@@ -53,7 +53,7 @@ pipeline {
 					
 					sh "docker pull localhost:5003/megaappimage"
 					
-					sh "docker run --name msmega --detach --restart=always --publish 8000:8081 --publish 45000:50000 localhost:5003/megaappimage"
+					sh "docker run --name msmega --detach --restart=always --publish 8000:8081 --publish 45000:50000 localhost:5004/megaappimage"
 				}
 			}
 		}
