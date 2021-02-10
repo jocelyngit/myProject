@@ -60,7 +60,7 @@ pipeline {
 		stage ('Deploy to kubernetes') {
 			steps {
 				script {
-					kubernetesDeploy(configs: "msmega.yaml", kubeconfigId: "kubeconfigcredential")
+					kubernetesDeploy(configs: "msmega.yaml", kubeconfigId: "kubeglobalcredentialid")
 				}  
 			}
 		}
