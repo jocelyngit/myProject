@@ -35,7 +35,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                     customImage = docker.build registry + ":${env.BUILD_ID}"
+                     customImage = docker.build("megaappimage:${env.BUILD_ID}")
 				}
 			}
 		}
@@ -43,11 +43,9 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			docker.withRegistry( '', registryCredential) { 
-
-                        dockerImage.push() 
-
-                    }
+			sh "docker tag megaappimage:${env.BUILD_ID} 192.168.151.23:5006/megaappimage"
+			
+			sh "docker push 192.168.151.23:5006/megaappimage"
 				}
 			}
 		}
