@@ -2,6 +2,8 @@ pipeline {
     agent any
 	
 	environment {
+		    registry = "jospunto/test" 
+        	registryCredential = 'dockerhubid' 
 		def customImage = ''
 	}
 	
@@ -32,7 +34,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                     customImage = docker.build("megaappimage:${env.BUILD_ID}")
+                     customImage = docker.build registry + ":${env.BUILD_ID}"
 				}
 			}
 		}
@@ -40,9 +42,11 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			sh "docker tag megaappimage:${env.BUILD_ID} 172.17.0.1:5003/megaappimage"
-			
-			sh "docker push 172.17.0.1:5003/megaappimage"
+			docker.withRegistry( '', registryCredential) { 
+
+                        dockerImage.push() 
+
+                    }
 				}
 			}
 		}
