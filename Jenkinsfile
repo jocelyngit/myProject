@@ -30,7 +30,7 @@ pipeline {
 			
         stage('Build Docker Image') {
             steps {
-                	bat "./mvnw spring-boot:build-image"
+                	bat './mvnw spring-boot:build-image'
 			}
 		}
 	    
