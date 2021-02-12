@@ -15,7 +15,7 @@ pipeline {
 			stage ('Initialize') {
 				steps {
 		
-					sh '''
+					bat '''
 						echo "M2_HOME = ${M2_HOME}"
 						echo  "JAVA_HOME = ${JAVA_HOME}"
 					''' 
@@ -24,7 +24,7 @@ pipeline {
 			
 			stage('Build') {
 				steps {
-					 sh 'mvn -B -DskipTests clean package'
+					 bat 'mvn -B -DskipTests clean package'
                 }
             }
 			
@@ -39,9 +39,9 @@ pipeline {
 	    stage('push Docker Image') {
             steps {
                 script {
-			sh "docker tag megaappimage:${env.BUILD_ID} localhost:5000/megaappimage"
+			bat "docker tag megaappimage:${env.BUILD_ID} localhost:5000/megaappimage"
 			
-			sh "docker push localhost:5000/megaappimage"
+			bat "docker push localhost:5000/megaappimage"
 				}
 			}
 		}
@@ -50,7 +50,7 @@ pipeline {
 			steps {
 				script {
 					
-					sh "docker run --name msmega --detach --restart=always --publish 8000:8081 --publish 45000:50000 localhost:5000/megaappimage"
+					bat "docker run --name msmega --detach --restart=always --publish 8000:8081 --publish 45000:50000 localhost:5000/megaappimage"
 				}
 			}
 		}
