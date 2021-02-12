@@ -31,8 +31,6 @@ pipeline {
         stage('Build Docker Image') {
             steps {
 		    script {
-			     bat "docker info"
-			    
 			    customImage = docker.build("megaappimage:${env.BUILD_ID}")
 		    }
 			}
