@@ -2,8 +2,6 @@ pipeline {
     agent any
 	
 	environment {
-		    registry = "jospunto/test" 
-        	registryCredential = 'dockerhubid' 
 		def customImage = ''
 	}
 	
