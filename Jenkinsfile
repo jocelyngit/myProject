@@ -31,9 +31,9 @@ pipeline {
 			
         stage('Build Docker Image') {
             steps {
-		    script {
-			    customImage = docker.build("megaappimage:${env.BUILD_ID}")
-		    }
+		    		bat 'docker pull openjdk:8-jdk-alpine'
+		    
+		    		bat 'docker build -t megaappimage:${env.BUILD_ID} .'
 			}
 		}
 	    
