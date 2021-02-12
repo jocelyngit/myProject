@@ -30,7 +30,9 @@ pipeline {
 			
         stage('Build Docker Image') {
             steps {
-                	bat './mvnw spring-boot:build-image'
+		    script {
+			    customImage = docker.build("megaappimage:${env.BUILD_ID}")
+		    }
 			}
 		}
 	    
