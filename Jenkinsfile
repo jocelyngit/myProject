@@ -33,7 +33,7 @@ pipeline {
             steps {
 		    		bat 'docker pull openjdk:8-jdk-alpine'
 		    
-		    		bat 'docker build -t megaappimage:${env.BUILD_ID} .'
+		    		bat "docker build -t megaappimage:${env.BUILD_ID} ."
 			}
 		}
 	    
