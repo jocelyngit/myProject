@@ -19,9 +19,14 @@ spec:
           ports:
             - containerPort: 8000
           env:
-            SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db-mega-app?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
-            SPRING_DATASOURCE_USERNAME: root
-            SPRING_DATASOURCE_PASSWORD: root
+            - name: DB_URL
+              value: jdbc:mysql://mysql:3306/db-mega-app?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+            - name: DB_USERNAME
+              value: root
+            - name: DB_PASSWORD
+              value: root
+            - name: MYSQL_DATABASE
+              value: db-mega-app
           imagePullPolicy: Always
 ---
 apiVersion: v1
