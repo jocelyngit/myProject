@@ -2,9 +2,9 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msmega-deployment2
+  name: msmega-deployment3
 spec:
-  replicas: 2
+  replicas: 1
   selector:
     matchLabels:
       app: kubepod
@@ -23,7 +23,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: msmega-service2
+  name: msmega-service3
 spec:
   selector:
     app: kubepod
