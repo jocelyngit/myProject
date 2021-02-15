@@ -19,8 +19,21 @@ spec:
           ports:
             - containerPort: 8000
           env:
-            - name: DB_URL
-              value: jdbc:mysql://mysql:3306/db-mega-app?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+            - name: SPRING_DATASOURCE_USERNAME # Name of the environment variable
+          valueFrom:          # Get the value of environment variable from kubernetes secrets
+            secretKeyRef:
+              name: mysql-user-pass
+              key: username
+        - name: SPRING_DATASOURCE_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-user-pass
+              key: password
+        - name: SPRING_DATASOURCE_URL
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-url
+              key: url
           imagePullPolicy: Always
 ---
 apiVersion: v1
