@@ -17,7 +17,7 @@ spec:
         - name: msmega
           image: localhost:5000/megaappimage
           ports:
-            - containerPort: 8000
+            - containerPort: 8081
           env:
             - name: SPRING_DATASOURCE_USERNAME 
               valueFrom:         
@@ -44,7 +44,7 @@ spec:
   selector:
     app: kubepod
   ports:
-    - name: http
-      port: 9500
-      targetPort: 8000
-  type: NodePort
+    - name: tcp
+      port: 80
+      targetPort: 8081
+  type: LoadBalancer
