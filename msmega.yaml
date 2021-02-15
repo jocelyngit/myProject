@@ -44,6 +44,7 @@ spec:
   selector:
     app: kubepod
   ports:
-    - port: 9500
+    - name: http
+      port: 9500
       targetPort: 8000
-  type: LoadBalancer
+  type: NodePort
