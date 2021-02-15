@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msmega-deployment3
+  name: msmega-deployment
 spec:
   replicas: 1
   selector:
@@ -19,7 +19,9 @@ spec:
           ports:
             - containerPort: 8000
           environment:
-            SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/database?autoReconnect=true&useSSL=false
+            SPRING_DATASOURCE_URL: jdbc:mysql://mysql:3306/db-mega-app?autoReconnect=true&useSSL=false&createDatabaseIfNotExist=true&useUnicode=true&useJDBCCompliantTimezoneShift=true&useLegacyDatetimeCode=false&serverTimezone=UTC
+            SPRING_DATASOURCE_USERNAME: root
+            SPRING_DATASOURCE_PASSWORD: root
           depends_on:
             - mysql
           imagePullPolicy: Always
@@ -27,7 +29,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: msmega-service3
+  name: msmega-service
 spec:
   selector:
     app: kubepod
