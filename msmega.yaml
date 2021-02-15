@@ -18,6 +18,9 @@ spec:
           image: localhost:5000/megaappimage
           ports:
             - containerPort: 8000
+          env:
+            - name: MYSQL_URL
+              value: mysql://mysql:3306/
           imagePullPolicy: Always
 ---
 apiVersion: v1
