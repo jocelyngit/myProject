@@ -2,7 +2,7 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: msmega-deployment1
+  name: msmega-deployment
 spec:
   replicas: 1
   selector:
@@ -39,12 +39,12 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: msmega-service1
+  name: msmega-service
 spec:
   selector:
     app: kubepod
   ports:
     - name: tcp
-      port: 80
+      port: 8000
       targetPort: 8081
   type: LoadBalancer
