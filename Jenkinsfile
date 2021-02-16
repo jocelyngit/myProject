@@ -46,15 +46,6 @@ pipeline {
 				}
 			}
 		}
-		
-        stage('run docker Image') {
-			steps {
-				script {
-					
-					bat "docker run --name msmega --detach --restart=always --publish 8000:8081 --publish 45000:50000 localhost:5000/megaappimage"
-				}
-			}
-		}
 		stage ('Deploy to kubernetes') {
 			steps {
 				script {
