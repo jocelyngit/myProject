@@ -22,12 +22,12 @@ spec:
             - name: SPRING_DATASOURCE_USERNAME 
               valueFrom:         
                 secretKeyRef:
-                  name: mysql-user-pass
+                  name: mysql-root-pass
                   key: username
             - name: SPRING_DATASOURCE_PASSWORD
               valueFrom:
                 secretKeyRef:
-                  name: mysql-user-pass
+                  name: mysql-root-pass
                   key: password
             - name: SPRING_DATASOURCE_URL
               valueFrom:
