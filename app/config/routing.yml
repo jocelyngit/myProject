@@ -1,0 +1,8 @@
+prov_back:
+    resource: "@ProvBackBundle/Controller/"
+    type: annotation
+    prefix:   /back
+
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation

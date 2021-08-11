@@ -1,0 +1,59 @@
+{% extends 'back.html.twig' %}
+{% block title %}{{ 'materiel'|title }}-{{ 'ajout' }}{% endblock %}
+{% block body %}
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                <div class="card-header">
+                    {% if materiel == NULL %}
+                        <strong> Ajouter un matériel</strong>
+                    {% else %}
+                        <strong> Modifier un matériel</strong>
+                    {% endif %}
+
+                    <a href="{{ path('back_liste_materiel') }}" type="button" class="view-list-btn btn btn-success">Voir la liste</a>
+
+                </div>
+                <style>
+                    .view-list-btn{
+                        float: right;
+                    }
+                </style>
+
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                <div class="card-body card-block">
+                    <div class="row form-group">
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="company" class=" form-control-label">Type de matériel *</label>
+                                {{ form_row(form.typeMateriel, {'label':' ','attr': {'class': 'form-control' }}) }}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="vat" class=" form-control-label">Conditionnement *</label>
+                                {{ form_row(form.conditionnement, {'label':' ','attr': {'class': 'form-control' }}) }}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="street" class=" form-control-label">Désignation</label>
+                                {{ form_row(form.designation, {'label':' ','attr': {'class': 'form-control', 'placeholder':'Entrer le nom du matériel' }}) }}
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Enregistrer
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Annuler
+                    </button>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+{% endblock %}
