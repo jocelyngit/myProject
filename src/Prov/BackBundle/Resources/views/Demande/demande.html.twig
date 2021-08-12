@@ -1,0 +1,137 @@
+{% extends 'back.html.twig' %}
+{% block title %}{{ 'demande'|title }}-{{ 'Faites une demande' }}{% endblock %}
+{% block body %}
+
+
+    <div class="row">
+        <div class="col-lg-12">
+            <div class="card">
+                {#<div class="card-header">
+                    {% if materiel == NULL %}
+                        <strong> Ajouter un matériel</strong>
+                    {% else %}
+                        <strong> Modifier un matériel</strong>
+                    {% endif %}
+
+                    <a href="{{ path('back_liste_materiel') }}" type="button" class="view-list-btn btn btn-success">Voir la liste</a>
+
+                </div>#}
+                <style>
+                    .view-list-btn{
+                        float: right;
+                    }
+                </style>
+
+                {{ form_start(form, {'attr': {'class': 'form-horizontal'}}) }}
+                <div class="card-body card-block", id="form">
+                    <div class="row form-group">
+
+                        <div class="col-6", id="cbtypem">
+                            <div class="form-group">
+                                <label for="company" class=" form-control-label"></label>
+                                {{ form_row(form.typeMateriel, {'label':'','attr': {'class': 'form-control' }}) }}
+
+                            </div>
+                        </div>
+                        <div class="col-6", id="cbmat">
+                            <div class="form-group">
+                                <label for="company" class=" form-control-label"></label>
+                                {{ form_row(form.materiel, {'label':'','attr': {'class': 'form-control' }}) }}
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="vat" class=" form-control-label"></label>
+                                {{ form_row(form.quantite, {'label':'','attr': {'class': 'form-control' }}) }}
+
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="street" class=" form-control-label"></label>
+                                {{ form_row(form.observation, {'label':'','attr': {'class': 'form-control' }}) }}
+                            </div>
+                        </div>
+                        <div class="col-6">
+                            <div class="form-group">
+                                <label for="company" class=" form-control-label"></label>
+                                {{ form_row(form.reference, {'label':'','attr': {'class': 'form-control' }}) }}
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-footer">
+                    <button type="submit" class="btn btn-primary btn-sm">
+                        <i class="fa fa-dot-circle-o"></i> Enregistrer
+                    </button>
+                    <button type="reset" class="btn btn-danger btn-sm">
+                        <i class="fa fa-ban"></i> Annuler
+                    </button>
+                </div>
+
+                {{ form_end(form) }}
+            </div>
+        </div>
+    </div>
+
+    {#Ajax request details#}
+    <script>
+        $(document).ready(function () {
+
+        $("#cbtypem").change(function(event){
+
+            // get the item selected
+             let id = $("#prov_backbundle_demande_typeMateriel").val();
+
+            console.log("********");
+            console.log(id);
+            console.log("********");
+
+            $.ajax({
+                url:        '/app_dev.php/back/ajx_getmatbytype',
+                type:       'GET',
+                dataType:   'json',
+                data : {"id":id},
+                async:      true,
+
+                success: function(data, status) {
+                    console.log(data);
+                },
+                error : function(xhr, textStatus, errorThrown) {
+                    console.log("Alert error with ajax");
+                }
+            });
+        });
+
+            $("#cbmat").change(function(){
+
+                // console.log()
+                var e = $("#cbmat").val();
+                // get the item selected
+                // let e = $(this).val();
+
+                console.log("********");
+                console.log(e);
+                console.log("********");
+
+                /*$.ajax({
+                    url:        '/ajx_getmatbytype/{id}',
+                    type:       'GET',
+                    dataType:   'json',
+                    async:      true,
+
+                    success: function(data, status) {
+                        console.log(data);
+                    },
+                    error : function(xhr, textStatus, errorThrown) {
+                        console.log("Aler error with ajax");
+                    }
+                });*/
+            });
+
+        });
+    </script>
+
+{% endblock %}

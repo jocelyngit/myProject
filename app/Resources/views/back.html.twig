@@ -189,7 +189,7 @@
                             <i class="fas fa-table"></i>Mes Demandes</a>
                     </li>
                     <li id="demande" style="cursor: pointer">
-                        <a href="#">
+                        <a href="{{ path('demande_route') }}">
                             <i class="fas fa-copy"></i>Demande
                         </a>
                     </li>
@@ -590,7 +590,7 @@
     </div>
 
 
-    <script>
+    {#<script>
         $( "#demande" ).click(function() {
             $( "#choix_provision" ).show( "slow", function() {
 
@@ -601,7 +601,7 @@
                 // Animation complete.
             });
         });
-    </script>
+    </script>#}
 
 </div>
 
