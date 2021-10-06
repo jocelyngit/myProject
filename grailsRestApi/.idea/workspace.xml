@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="cdebbb61-6734-48b2-9343-dd22f035cf22" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/build.gradle" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/conf/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/conf/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/conf/logback.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/conf/logback.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api/CategorieController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api/CategorieController.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api/SessionController.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api/SessionController.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Commande.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Commande.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/CommandeLigne.groovy" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Membre.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Membre.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Produit.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Produit.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Session.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/Session.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/SessionProduit.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/domain/mutrassto/api/SessionProduit.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/init/mutrassto/api/BootStrap.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/init/mutrassto/api/BootStrap.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/services/mutrassto/api/CategorieService.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/services/mutrassto/api/CategorieService.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/services/mutrassto/api/GenericService.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/services/mutrassto/api/GenericService.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/grails-app/services/mutrassto/api/SessionService.groovy" beforeDir="false" afterPath="$PROJECT_DIR$/mutrassto-api/grails-app/services/mutrassto/api/SessionService.groovy" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/mutrassto-api/src/test/groovy/mutrassto/api/CommandeLigneSpec.groovy" beforeDir="false" />
+    </list>
+    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
+    <option name="TRACKING_ENABLED" value="true" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="grailsRestApi">
+      <favorite_root url="file://$PROJECT_DIR$" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+        <favorite_root url="file://$PROJECT_DIR$/.idea" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/.idea/misc.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/modules.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/workspace.xml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/.idea/grailsRestApi.iml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+        <favorite_root url="file://$PROJECT_DIR$/mutrassto-api" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/main" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/main/groovy" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/main/webapp" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/test" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/test/groovy" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/integration-test" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/src/integration-test/groovy" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradle" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradle/wrapper" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradle/wrapper/gradle-wrapper.jar" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradle/wrapper/gradle-wrapper.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradlew" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grailsw" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/.gitignore" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/conf" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/conf/spring" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/conf/spring/resources.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/conf/logback.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/conf/application.yml" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_cs.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_da.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_de.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_es.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_fr.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_it.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_ja.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_nb.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_nl.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_pl.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_ru.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_sk.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_sv.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_th.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_pt_BR.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_pt_PT.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/i18n/messages_zh_CN.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/init" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/init/mutrassto" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/init/mutrassto/api" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/init/mutrassto/api/BootStrap.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/init/mutrassto/api/Application.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+              </favorite_root>
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/utils" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/errors" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/errors/_errors.gson" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/object" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/object/_object.gson" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/error.gson" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/application" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/application/index.gson" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+              </favorite_root>
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/views/notFound.gson" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+            </favorite_root>
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/domain" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/services" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/controllers" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+              <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api" module="grailsRestApi" type="directory" klass="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode">
+                  <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api/UrlMappings.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                  <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-app/controllers/mutrassto/api/ApplicationController.groovy" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+                </favorite_root>
+              </favorite_root>
+            </favorite_root>
+          </favorite_root>
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradlew.bat" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grailsw.bat" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/build.gradle" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/gradle.properties" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+          <favorite_root url="file://$PROJECT_DIR$/mutrassto-api/grails-wrapper.jar" type="psiFile" klass="com.intellij.ide.projectView.impl.nodes.PsiFileNode" />
+        </favorite_root>
+      </favorite_root>
+    </favorites_list>
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="SCHEME" value="Project" />
+  </component>
+  <component name="Git.Settings">
+    <option name="ROOT_SYNC" value="DONT_SYNC" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GradleLocalSettings">
+    <option name="projectSyncType">
+      <map>
+        <entry key="$PROJECT_DIR$/../../grails" value="PREVIEW" />
+        <entry key="$PROJECT_DIR$/../../grails2/testrest" value="PREVIEW" />
+      </map>
+    </option>
+  </component>
+  <component name="JsBuildToolGruntFileManager" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsBuildToolPackageJson" detection-done="true" sorting="DEFINITION_ORDER" />
+  <component name="JsGulpfileManager">
+    <detection-done>true</detection-done>
+    <sorting>DEFINITION_ORDER</sorting>
+  </component>
+  <component name="MavenProjectNavigator">
+    <treeState>
+      <expand />
+      <select />
+    </treeState>
+  </component>
+  <component name="ProjectFrameBounds">
+    <option name="x" value="10" />
+    <option name="y" value="20" />
+    <option name="width" value="1346" />
+    <option name="height" value="728" />
+  </component>
+  <component name="ProjectView">
+    <navigator proportions="" version="1">
+      <foldersAlwaysOnTop value="true" />
+    </navigator>
+    <panes>
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
+      <pane id="ProjectPane">
+        <subPane>
+          <expand>
+            <path>
+              <item name="grailsRestApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grailsRestApi" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="grailsRestApi" type="b2602c69:ProjectViewProjectNode" />
+              <item name="grailsRestApi" type="462c0819:PsiDirectoryNode" />
+              <item name="mutrassto-api" type="462c0819:PsiDirectoryNode" />
+            </path>
+          </expand>
+          <select />
+        </subPane>
+      </pane>
+    </panes>
+  </component>
+  <component name="PropertiesComponent">
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="C:/Program Files/Git/bin/git.exe" />
+    <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
+    <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="settings.editor.selected.configurable" value="vcs.Git" />
+  </component>
+  <component name="RunDashboard">
+    <option name="ruleStates">
+      <list>
+        <RuleState>
+          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
+        </RuleState>
+        <RuleState>
+          <option name="name" value="StatusDashboardGroupingRule" />
+        </RuleState>
+      </list>
+    </option>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="Application" factoryName="Application">
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+    </configuration>
+    <configuration default="true" type="JUnit" factoryName="JUnit">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="TEST_OBJECT" value="class" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <patterns />
+    </configuration>
+    <configuration default="true" type="TestNG" factoryName="TestNG">
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="cdebbb61-6734-48b2-9343-dd22f035cf22" name="Default" comment="" />
+      <created>1564673012585</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1564673012585</updated>
+      <workItem from="1564673015725" duration="1026000" />
+      <workItem from="1579685147749" duration="1163000" />
+      <workItem from="1579937855212" duration="1836000" />
+      <workItem from="1581337425785" duration="796000" />
+      <workItem from="1583161449069" duration="4000" />
+      <workItem from="1598910418711" duration="623000" />
+      <workItem from="1601648681626" duration="1502000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TimeTrackingManager">
+    <option name="totallyTimeSpent" value="6950000" />
+  </component>
+  <component name="TodoView" selected-index="1">
+    <todo-panel id="selected-file">
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+    <todo-panel id="all">
+      <are-packages-shown value="true" />
+      <is-autoscroll-to-source value="true" />
+    </todo-panel>
+  </component>
+  <component name="ToolWindowManager">
+    <frame x="10" y="20" width="1346" height="728" extended-state="0" />
+    <layout>
+      <window_info anchor="right" id="Palette" order="3" />
+      <window_info anchor="bottom" id="TODO" order="6" visible="true" weight="0.329806" />
+      <window_info anchor="right" id="Palette&#9;" order="3" />
+      <window_info id="Image Layers" order="2" />
+      <window_info anchor="right" id="Capture Analysis" order="3" />
+      <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
+      <window_info anchor="right" id="Maven Projects" order="3" weight="0.32970452" />
+      <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
+      <window_info anchor="bottom" id="Version Control" order="7" weight="0.329806" />
+      <window_info anchor="bottom" id="Run" order="2" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.329806" />
+      <window_info id="Capture Tool" order="2" />
+      <window_info id="Designer" order="2" />
+      <window_info content_ui="combo" id="Project" order="0" sideWeight="0.48947367" visible="true" weight="0.1881804" />
+      <window_info anchor="right" id="Database" order="3" weight="0.32970452" />
+      <window_info anchor="bottom" id="Find" order="1" />
+      <window_info id="Structure" order="1" sideWeight="0.5105263" side_tool="true" weight="0.17962675" />
+      <window_info anchor="right" id="Ant Build" order="1" weight="0.2496112" />
+      <window_info id="UI Designer" order="2" />
+      <window_info anchor="right" id="Theme Preview" order="3" />
+      <window_info id="Favorites" order="2" sideWeight="0.5105263" side_tool="true" weight="0.17962675" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
+      <window_info anchor="bottom" id="Messages" order="7" />
+      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
+      <window_info anchor="bottom" id="Message" order="0" />
+      <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
+    </layout>
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+  <component name="VcsContentAnnotationSettings">
+    <option name="myLimit" value="2678400000" />
+  </component>
+  <component name="antWorkspaceConfiguration">
+    <option name="IS_AUTOSCROLL_TO_SOURCE" value="false" />
+    <option name="FILTER_TARGETS" value="false" />
+  </component>
+</project>
