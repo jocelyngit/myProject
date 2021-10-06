@@ -1,0 +1,147 @@
+<?php
+
+namespace App\Providers;
+
+use Illuminate\Support\ServiceProvider;
+
+use App\service;
+
+class AppServiceProvider extends ServiceProvider
+{
+    /**
+     * Register any application services.
+     *
+     * @return void
+     */
+    public function register()
+    {
+        // Enregistrer le generic service
+        //
+        $this->app->bind(service\GenericService::class, function ($app) {
+            return new service\GenericService();
+        });
+
+        // CompteService
+        $this->app->bind(service\CompteService::class, function ($app) {
+            return new service\CompteService();
+        });
+
+        //Cotisation
+        $this->app->bind(service\CotisationService::class, function ($app) {
+            return new service\CotisationService();
+        });
+
+        //Membre
+        $this->app->bind(service\MembreService::class, function ($app) {
+            return new service\MembreService();
+        });
+
+        //OperaationService
+        $this->app->bind(service\OperationService::class, function ($app) {
+            return new service\OperationService();
+        });
+
+        // OpportuniteService
+        $this->app->bind(service\OpportuniteService::class, function ($app) {
+            return new service\OpportuniteService();
+        });
+
+        // Profil
+        $this->app->bind(service\ProfilService::class, function ($app) {
+            return new service\ProfilService();
+        });
+
+
+        // TypeOperationService
+        $this->app->bind(service\TypeOperationService::class, function ($app) {
+            return new service\TypeOperationService();
+        });
+
+
+        //ZoneofAgentMarketeur
+        $this->app->bind(service\ZoneService::class, function ($app) {
+            return new service\ZoneService();
+        });
+
+
+        /*
+         * Agence
+         */
+        $this->app->bind(service\AgenceService::class, function ($app) {
+            return new service\AgenceService();
+        });
+
+        /*
+         * Calcul d'opprtunité
+         */
+        $this->app->bind(service\CalculOpportuniteService::class, function ($app) {
+            return new service\CalculOpportuniteService();
+        });
+
+        /*
+         * Agent Marketing
+         */
+        $this->app->bind(service\AgentMarketingService::class, function ($app) {
+            return new service\AgentMarketingService();
+        });
+
+        /*
+         * Compte de depot
+         */
+        $this->app->bind(service\CompteDeDepotService::class, function ($app) {
+            return new service\CompteDeDepotService();
+        });
+
+        /*
+         * OPPORTUNITE
+         */
+
+        $this->app->bind(service\OpportuniteService::class, function ($app) {
+            return new service\OpportuniteService();
+        });
+
+        /**
+         * PROFESSION
+         */
+
+        $this->app->bind(service\ProfessionService::class, function ($app) {
+            return new service\ProfessionService();
+        });
+
+         /**
+          * SECTEUR ACTIVITE
+          */
+
+          $this->app->bind(service\SecteurActiviteService::class, function ($app) {
+            return new service\SecteurActiviteService();
+        });
+
+          /**
+           * DEPOT MARKETEUR
+           */
+
+          $this->app->bind(service\DepotMarketeurService::class, function ($app) {
+            return new service\DepotMarketeurService();
+        });
+
+        /**
+         * COMMISSION
+         */
+
+        $this->app->bind(service\CommissionService::class, function ($app) {
+            return new service\CommissionService();
+        });
+
+
+    }
+
+    /**
+     * Bootstrap any application services.
+     *
+     * @return void
+     */
+    public function boot()
+    {
+        //
+    }
+}

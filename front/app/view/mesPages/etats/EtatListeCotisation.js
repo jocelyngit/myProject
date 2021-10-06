@@ -1,0 +1,366 @@
+
+
+Ext.define('zonblewou.view.mesPages.etats.EtatListeCotisation', {
+
+    extend: 'Ext.grid.Panel',
+
+    xtype: 'etatListeCotisation',
+
+    //bodyPadding: 10,
+
+    //reference: 'cotisationGridRef',
+
+    stripeRows        : true,
+
+    columnLines: true,
+
+    style: 'padding: 20px',
+
+    features: [{
+        ftype: 'summary'
+    }],
+
+    requires: [
+
+        'zonblewou.store.mesStore.AllCotisation',
+
+        'zonblewou.store.mesStore.Mois',
+
+        'Ext.grid.filters.filter.Base',
+
+        'zonblewou.store.mesStore.AgentMarketing',
+
+        'Ext.util.Format',
+
+        'zonblewou.view.mesPages.etats.ListeCotisationController'
+    ],
+
+    dockedItems: [
+        {
+            xtype: 'toolbar',
+            dock: 'top',
+            bodyPadding : 10,
+            items: [
+                '-',{
+
+                    xtype: 'datefield',
+                    emptyText: 'Date',
+                    fieldLabel: 'Date de cotisation',
+                    labelAlign: 'left',
+                    //allowBlank: false,
+                    reference: 'dateCotisationLcRef',
+                    name: 'dateCotisation',
+                    //blankText: 'Ce champ est obligatoire',
+                    //msgTarget: 'side',
+
+                    editable: false,
+                    //readOnly: true,
+
+                    maxValue: new Date(),
+
+                    //minValue: new Date(),
+
+                    //value: new Date(),
+
+                    format: 'd/m/Y',
+
+                    submitFormat: 'Y/m/d',
+
+                    //submitFormat: 'Y/m/d H:i:s'
+
+                    //listners
+                    listeners: {
+                        change: 'onDateFieldOfListeCotisationChange'
+                    }
+
+                },
+                '-',
+
+                {
+                    xtype: 'combo',
+                    fieldLabel: 'Mois',
+                    labelAlign: 'left',
+                    reference : 'moisComboLCRef',
+                    forceSelection: true,
+                    emptyText: '-- Selectionner --',
+                    store: {
+                        type: 'mois',
+                        autoLoad: true
+                    },
+
+                    queryMode: 'local',
+                    displayField: 'mois',
+                    valueField: 'code' ,
+                    editable: false,
+                    msgTarget: 'side',
+
+                    listeners: {
+                        select : 'onComboMoiselect'
+                    }
+                },
+                '-',
+                {
+                    xtype: 'combo',
+                    fieldLabel: 'Agent',
+                    labelAlign: 'left',
+                    reference : 'agentComboLCRef',
+                    forceSelection: true,
+                    emptyText: '-- Selectionner --',
+                    disabled : true,
+                    store: {
+                        type: 'agentmarketing',
+                        autoLoad: true
+                    },
+
+                    queryMode: 'local',
+                    //displayField: 'nomMembre',
+                    //valueField:  ,
+                    editable: false,
+                    msgTarget: 'side',
+
+                    tpl: Ext.create('Ext.XTemplate',
+                        '<ul class="x-list-plain"><tpl for=".">',
+                        '<li role="option" class="x-boundlist-item">{nomAg} {prenomAg}</li>',
+                        '</tpl></ul>'
+                    ),
+                    // template for the content inside text field
+                    displayTpl: Ext.create('Ext.XTemplate',
+                        '<tpl for=".">',
+                        '{nomAg} {prenomAg}',
+                        '</tpl>'
+                    ),
+                    listeners: {
+                        select : 'onAgentComboSelectLC',
+
+                    }
+                },
+
+                '->',
+                {
+                    xtype: 'button', //#27
+                    //formBind: true, //#28
+                    //iconCls: 'fa fa-sign-in fa-lg',
+                    //text: 'Submit'
+                    iconCls: 'fa fa-close',
+                    text: 'Restaurer',
+                    //glyph: Packt.util.Glyphs.getGlyph('print'),
+                    //listeners: {
+                    //click: 'onBtnCommissionListePrint'
+                    //}
+                    handler : 'onBtnCotisationListeReset'
+                },
+                '-',
+                {
+                    xtype: 'button', //#27
+                    //formBind: true, //#28
+                    //iconCls: 'fa fa-sign-in fa-lg',
+                    //text: 'Submit'
+                    iconCls: 'fa fa-print',
+                    text: 'Imprimer',
+                    //glyph: Packt.util.Glyphs.getGlyph('print'),
+                    listeners: {
+                        click: 'onBtnListeCotisationPrint'
+                    }
+                }
+
+
+                /*
+                  '-',
+                 {
+                     xtype: 'button',
+                     text: '<b>Régulariser</b>',
+                     handler: 'onRegularisationBtnClick'
+                 },
+
+
+                '->',
+                {
+                    xtype: 'button',
+                    text: '<b>Effacer</b>',
+                    handler: 'onRegEffacerBtnClick'
+                }
+
+                 */
+
+            ]
+        },
+        /*{
+            xtype: 'pagingtoolbar',
+            dock: 'bottom',
+            //store: zonblewou.store.mesStore.AllCotisation,
+            itemId: 'userPaginationToolbar',
+            displayInfo: true,
+            //bind: '{usersResults}'
+        }
+
+         */
+    ],
+
+    controller: 'listecotisationcontroller',
+
+    //store : Ext.data.StoreManager.lookup('allcotisationStoreId'),
+    store: {
+       type: 'allcotisation'
+
+   },
+    //plugins: 'gridfilters',
+
+
+    //viewModel: {
+    //    type: 'searchresults'
+    //},
+
+    //cls: 'shadow',
+    //activeTab: 0,
+    //margin: 20,
+
+    //items: [{
+    //xtype: 'gridpanel',
+    cls: 'user-grid',
+    title: 'LISTE DES COTISATIONS',
+    //routeId: 'user',
+    //bind: '{usersResults}',
+    //scrollable: false,
+    columns: [{
+                xtype: 'rownumberer',
+                width: 40,
+                //dataIndex: 'identifier',
+                text: '#'
+            },
+
+            {
+                xtype: 'gridcolumn',
+                cls: 'content-column',
+                dataIndex: 'idMembre',
+                text: 'Id Membre',
+                //flex: 0.15,
+                hidden: true
+            },
+            {
+                xtype: 'gridcolumn',
+                cls: 'content-column',
+                dataIndex: 'idCompte',
+                text: 'Id Compte',
+                flex: 0.5,
+                hidden: true
+            },
+            /*{
+                xtype: 'gridcolumn',
+                cls: 'content-column',
+                dataIndex: 'idUser',
+                text: 'IdentifiantUser',
+                //flex: 0.15,
+                hidden: true
+            },*/
+            {
+                xtype: 'gridcolumn',
+                cls: 'content-column',
+                dataIndex: 'numCompte',
+                text: 'Numéro de compte',
+                //width: 150,
+                flex: 0.8,
+                //filter: true,
+                //filter: {
+                //   xtype: 'textfield'
+                //}
+            },
+            {
+                xtype: 'datecolumn',
+                cls: 'content-column',
+                dataIndex: 'dateCotisation',
+                text: 'Date de cotisation',
+                // width: 150,
+                flex: 0.6,
+                format: 'd/m/Y',
+                filterable: true
+                //filter: true,
+                /*filter: {
+                type: 'date',
+                    // optional picker config
+                    pickerDefaults: {
+                        // any DatePicker configs
+                    }
+                }
+                */
+
+
+            },
+            {
+                xtype: 'numbercolumn',
+                cls: 'content-column',
+                dataIndex: 'montantCotisation',
+                text: 'Montant cotisé',
+                flex: 0.5,
+                //width: 150,
+
+                renderer: function(value) {
+
+                    var format = "0,000";
+
+                    Ext.util.Format.thousandSeparator = ".";
+
+                    Ext.util.Format.decimalSeparator  = ",";
+
+                    return Ext.String.format('{0}  FCFA', Ext.util.Format.number(value, format));
+                },
+                summaryType: 'sum',
+
+                summaryRenderer : function (value) {
+                    var format = "0,000";
+
+                    Ext.util.Format.thousandSeparator = ".";
+
+                    Ext.util.Format.decimalSeparator  = ",";
+
+                    return Ext.String.format('{0}  FCFA', Ext.util.Format.number(value, format));
+                }
+            },
+            {
+                xtype: 'numbercolumn',
+                cls: 'content-column',
+                dataIndex: 'mise',
+                text: 'Mise',
+                //width: 150,
+                flex: 0.5,
+
+                renderer: function(value) {
+                    var format = "0,000";
+
+                    Ext.util.Format.thousandSeparator = ".";
+
+                    Ext.util.Format.decimalSeparator  = ",";
+
+                    return Ext.String.format('{0}  FCFA', Ext.util.Format.number(value, format));
+                }
+            },
+            {
+                xtype: 'templatecolumn',
+                cls: 'content-column',
+                tpl: '{nomMembre} {prenomMembre}',
+                text: 'Membre',
+                flex: 1
+            },
+            {
+                xtype: 'templatecolumn',
+                cls: 'content-column',
+                tpl: '{nomAg} {prenomAg}',
+                text: 'Marketeur',
+                flex: 1,
+                filter: {
+                    // required configs
+                    type: 'string',
+                    // optional configs
+                    //value: 'star',  // setting a value makes the filter active.
+                    itemDefaults: {
+                        //empyText: 'Rechercher ...'
+                        // any Ext.form.field.Text configs accepted
+                    }
+                }
+            }
+
+        ]
+        // plugins: [{ ptype: "gridFilter" }]
+
+    //}]
+
+});
